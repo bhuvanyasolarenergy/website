@@ -1,0 +1,165 @@
+import { company } from "@/assets/data/company";
+import { Link } from "react-router-dom";
+
+const Footer = () => {
+  return (
+    <footer className="srex-footer-two">
+      <div className="container">
+        <div className="srex-footer-two__top__content">
+          <ul className="srex-footer-two__top__content__contact d-flex justify-content-between">
+            <li>
+              <div className="srex-footer-two__top__content__contact __icon">
+                <i className="fa-solid fa-phone"></i>
+              </div>
+              <div className="srex-footer-two__top__content__contact __text">
+                <p>Phone:</p>
+                <p>
+                  <a href={`tel:${company.phoneTel}`}>{company.phoneDisplay}</a>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className="srex-footer-two__top__content__contact __icon">
+                <i className="fa-solid fa-envelope"></i>
+              </div>
+              <div className="srex-footer-two__top__content__contact __text">
+                <p>Email:</p>
+                <h3>
+                  <a href={`mailto:${company.email}`}>{company.email}</a>
+                </h3>
+              </div>
+            </li>
+            <li>
+              <div className="srex-footer-two__top__content__contact __icon">
+                <i className="fa-solid fa-location-dot"></i>
+              </div>
+              <div className="srex-footer-two__top__content__contact __text">
+                <p>Address:</p>
+                <h3>
+                  {company.addressLines[0]}, {company.addressLines[1]}
+                </h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="srex-footer-two__links footer-two">
+          <div className="row">
+            <div className="col-12 col-lg-5 col-md-6">
+              <div className="srex-footer-two__links__logo">
+                <img src={company.logoUrl} alt={company.legalName} />
+                <p className="srex-footer-two__links__logo__text">
+                  {company.legalName} — turnkey solar for homes and businesses. Serving {company.serviceRegions}.
+                </p>
+                <ul className="srex-footer-two__links__social_links">
+                  <li>
+                    <i className="fa-brands fa-facebook"></i>
+                  </li>
+                  <li>
+                    <i className="fa-brands fa-x-twitter"></i>
+                  </li>
+                  <li>
+                    <i className="fa-brands fa-instagram"></i>
+                  </li>
+                  <li>
+                    <i className="fa-brands fa-pinterest"></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-6 col-lg-2 col-md-6">
+              <div className="srex-footer__links__wrapper">
+                <h4>Useful Links</h4>
+                <div className="srex-footer__links__content">
+                  <ul className="srex-footer__links__list">
+                    <li>
+                      <Link to="/about">About us</Link>
+                    </li>
+                    <li>
+                      <Link to="/services">Our Service</Link>
+                    </li>
+                    <li>
+                      <Link to="/services">What We Do</Link>
+                    </li>
+                    <li>
+                      <Link to="/projects">Projects</Link>
+                    </li>
+                    <li>
+                      <Link to="/contact">Contact</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-6 col-lg-2 col-md-6">
+              <div className="srex-footer__links__wrapper">
+                <h4>What we offer</h4>
+                <div className="srex-footer__links__content">
+                  <ul className="srex-footer__links__list">
+                    <li>
+                      <Link to="/services">Rooftop solar</Link>
+                    </li>
+                    <li>
+                      <Link to="/services">Commercial solar</Link>
+                    </li>
+                    <li>
+                      <Link to="/services">Industrial solar</Link>
+                    </li>
+                    <li>
+                      <Link to="/services">EPC services</Link>
+                    </li>
+                    <li>
+                      <Link to="/services">O&amp;M support</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-lg-3 col-md-6">
+              <div className="srex-footer__links__wrapper">
+                <h4>Newsletter</h4>
+                <div className="srex-footer__links__content">
+                  <div className="srex-footer__newsletter">
+                    <p>Get updates on solar solutions and offers from Bhuvanya Energy.</p>
+                    <div className="srex-footer__form">
+                      <form className="text-center">
+                        <input placeholder="Enter your email" type="text" />
+                        <button type="button">
+                          <i className="fa-solid fa-paper-plane"></i>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-line"></div>
+
+        <div className="srex-footer__bottom">
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <p>&copy; {new Date().getFullYear()} {company.legalName} All rights reserved.</p>
+            </div>
+            <div className="col-12 col-md-6">
+              <ul className="srex-footer__bottom__links">
+                <li>
+                  <a href="#">Terms &amp; conditions</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
