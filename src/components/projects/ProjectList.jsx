@@ -10,12 +10,12 @@ const ProjectList = () => {
   const totalImages = useRef(0);
 
   const portfolioItems = [
-    { id: 1, category: "solar-pro", title: "Equality and solidarity", image: "/images/portfolio/portfolio-1.png" },
-    { id: 2, category: "power", title: "Windward Renewables", image: "/images/portfolio/portfolio-2.png" },
-    { id: 3, category: "eco-solar", title: "Sun Breeze Power", image: "/images/portfolio/portfolio-3.png" },
-    { id: 4, category: "power", title: "Sun Breeze Power", image: "/images/portfolio/portfolio-2.png" },
-    { id: 5, category: "eco-solar", title: "Sun Breeze Power", image: "/images/portfolio/portfolio-3.png" },
-    { id: 6, category: "energy", title: "Wind Whisper Energy", image: "/images/portfolio/portfolio-4.png" },
+    { id: 1, category: "solar-pro", title: "Commercial rooftop — Jaipur", image: "/images/portfolio/portfolio-1.png" },
+    { id: 2, category: "power", title: "Industrial plant — Kishangarh", image: "/images/portfolio/portfolio-2.png" },
+    { id: 3, category: "eco-solar", title: "Residential rooftop — Neemrana", image: "/images/portfolio/portfolio-3.png" },
+    { id: 4, category: "power", title: "Warehouse solar — Gujarat", image: "/images/portfolio/portfolio-2.png" },
+    { id: 5, category: "eco-solar", title: "Institutional rooftop — Haryana", image: "/images/portfolio/portfolio-3.png" },
+    { id: 6, category: "energy", title: "C&I solar — Udaipur region", image: "/images/portfolio/portfolio-4.png" },
   ];
 
   totalImages.current = portfolioItems.length;

@@ -1,27 +1,23 @@
-import BeplOverview from "@/components/about/BeplOverview";
-import Features from "@/components/home-one/Features";
-import Video from "@/components/home-one/Video";
-import AboutUs from "@/components/home-two/AboutUs";
-import Newsletter from "@/components/home-two/Newsletter";
-import Sponsor from "@/components/home-two/Sponsor";
+import AboutHero from "@/components/about/AboutHero";
+import AboutIntro from "@/components/about/AboutIntro";
+import AboutLeadership from "@/components/about/AboutLeadership";
+import AboutServices from "@/components/about/AboutServices";
+import AboutStats from "@/components/about/AboutStats";
+import AboutVisionMission from "@/components/about/AboutVisionMission";
 import Testimonial from "@/components/home-two/Testimonial";
-import SectionTop from "@/components/shared/SectionTop";
+import Sponsor from "@/components/home-two/Sponsor";
 
 const About = () => {
   return (
     <>
-      <SectionTop title="About Us" />
-      <div className="pt-120">
-        <BeplOverview />
-      </div>
-      <div className="pt-120">
-        <AboutUs />
-      </div>
-      <Features />
-      <Video />
+      <AboutHero />
+      <AboutIntro />
+      <AboutStats />
+      <AboutLeadership />
+      <AboutVisionMission />
+      <AboutServices />
       <Testimonial />
       <Sponsor />
-      <Newsletter />
     </>
   );
 };

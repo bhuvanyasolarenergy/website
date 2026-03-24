@@ -1,6 +1,7 @@
 .srex-testimonial-two {
-  background-color: $gray-color;
-  background-image: url(/images/home-two/testimonial-bg.png);
+  background-color: #e8eef9;
+  background-image: radial-gradient(ellipse 100% 80% at 90% 70%, rgba($primary-color, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 10% 20%, rgba($primary-color, 0.1) 0%, transparent 50%);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 120px;
@@ -120,6 +121,11 @@
       // text-align: center;
       justify-content: center;
     }
+
+    > img:first-of-type {
+      filter: hue-rotate(175deg) saturate(0.95) brightness(1.02);
+    }
+
     &__img {
       position: absolute;
       right: 67px;

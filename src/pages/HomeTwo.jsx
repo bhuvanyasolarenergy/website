@@ -3,7 +3,6 @@ import Blogs from "@/components/home-two/Blogs";
 import Footer from "@/components/home-two/Footer";
 import Header from "@/components/home-two/Header";
 import Hero from "@/components/home-two/Hero";
-import Newsletter from "@/components/home-two/Newsletter";
 import Portfolio from "@/components/home-two/Portfolio";
 import Question from "@/components/home-two/Question";
 import ServiceOne from "@/components/home-two/ServiceOne";
@@ -41,10 +40,6 @@ const HomeTwo = () => {
       {/* <!-- Testimonial Section Start --> */}
       <Testimonial />
       {/* <!-- Testimonial Section End --> */}
-
-      {/* <!-- NewsLetter Section Start --> */}
-      <Newsletter />
-      {/* <!-- NewsLetter Section End --> */}
 
       {/* <!-- Services Section Start --> */}
       <Services />

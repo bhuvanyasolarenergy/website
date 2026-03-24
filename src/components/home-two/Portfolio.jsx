@@ -9,8 +9,8 @@ const Portfolio = () => {
   const totalImages = useRef(0);
 
   const portfolioItems = [
-    { id: 1, category: "solar-pro", title: "Equality and solidarity", image: "/images/home-two/portfolio/portfolio-1.png" },
-    { id: 2, category: "power", title: "Windward Renewables", image: "/images/home-two/portfolio/portfolio-2.png" },
+    { id: 1, category: "solar-pro", title: "Commercial rooftop — Jaipur", image: "/images/home-two/portfolio/portfolio-1.png" },
+    { id: 2, category: "eco-solar", title: "Industrial solar — Rajasthan", image: "/images/home-two/portfolio/portfolio-2.png" },
   ];
 
   totalImages.current = portfolioItems.length;

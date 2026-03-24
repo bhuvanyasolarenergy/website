@@ -12,23 +12,18 @@ const Footer = () => {
           <div className="col-lg-6 col-6 col-md-6">
             <ul className="srex-footer__social_links">
               <li>
-                <a href="#">
-                  <i className="fa-brands fa-facebook"></i>
+                <a href={company.whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                  <i className="fa-brands fa-whatsapp"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i className="fa-brands fa-x-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
+                <a href={company.instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i className="fa-brands fa-pinterest"></i>
+                <a href={company.linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <i className="fa-brands fa-linkedin"></i>
                 </a>
               </li>
             </ul>
@@ -126,24 +121,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div data-aos="fade" data-aos-delay="600" className="col-12 col-lg-3 col-md-6">
-              <div className="srex-footer__links__wrapper">
-                <h4>Newsletter</h4>
-                <div className="srex-footer__links__content">
-                  <div className="srex-footer__newsletter">
-                    <p>Subscribe for solar tips, project updates, and energy news from Bhuvanya Energy.</p>
-                    <div className="srex-news-letter__box__right">
-                      <form className="text-center">
-                        <input placeholder="Enter your email" type="text" />
-                        <button type="button" className="srex-btn srex-btn--primary">
-                          Subscribe Now
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -157,13 +134,13 @@ const Footer = () => {
             <div className="col-12 col-md-6">
               <ul className="srex-footer__bottom__links">
                 <li>
-                  <a href="#">Service</a>
+                  <Link to="/services">Services</Link>
                 </li>
                 <li>
-                  <a href="#">Section</a>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <a href="#">About</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>

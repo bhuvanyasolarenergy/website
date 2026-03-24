@@ -9,17 +9,21 @@ import ProjectDetails from "@/pages/ProjectDetails";
 import Projects from "@/pages/Projects";
 import ServiceDetails from "@/pages/ServiceDetails";
 import Services from "@/pages/Services";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomeTwo />,
   },
   {
     path: "/index-2",
-    element: <HomeTwo />,
+    element: <Navigate to="/" replace />,
+  },
+  {
+    path: "/home-one",
+    element: <Home />,
   },
   {
     element: <RootLayout />,
@@ -53,7 +57,7 @@ export const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "/blog-details",
+        path: "/blogs/:id",
         element: <BlogDetails />,
       },
       {

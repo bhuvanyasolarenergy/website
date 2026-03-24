@@ -1,3 +1,4 @@
+import { company } from "@/assets/data/company";
 import SectionTop from "@/components/shared/SectionTop";
 
 const ProjectDetails = () => {
@@ -10,48 +11,53 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="srex-single-pro-img">
-                <img src="/images/srex-single-proect.png" alt="" />
+                <img src="/images/srex-single-proect.png" alt="Solar installation project" />
               </div>
             </div>
             <div className="col-lg-8 col-sm-12 col-xs-12">
               <div className="single_pro_details">
-                <h1>Exploring The Benefit Of Solar Energy</h1>
+                <h1>Commercial rooftop solar installation</h1>
                 <p>
-                  Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lore ipsum dolor sit amet, consectetur adipiscing elit. In hac habit asse pla dictumst. Duis porta, quam ut finibus ultrices, lorem lacusNullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lore ipsum dolor sit amet, consectetur adipiscing elit. In
-                  hac habit asse pla dictumst. Duis porta, quam ut finibus ultrices, lorem lacus.
+                  Bhuvanya Energy delivers turnkey solar solutions for commercial and industrial clients. From initial feasibility study and site assessment through design, approvals, installation, and commissioning, we handle every aspect of your solar project. Our team of electrical engineers brings deep expertise in solar plant design and long-term performance optimization.
                 </p>
-                <p>Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lore ipsum dolor sit amet, consectetur adipiscing elit. In hac habit asse pla dictumst. Duis porta, quam ut finibus ultrices, lorem lacus</p>
-                <h4>Be safe and Healthy</h4>
-                <p>Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lore ipsum dolor sit amet, consectetur adipiscing elit. In hac habit asse pla dictumst. Duis porta, quam ut finibus ultrices, lorem lacus</p>
+                <p>
+                  We focus on engineering precision and quality execution — from shadow mapping and load analysis to technology selection, financial modelling, and O&M support. Unlike companies that focus only on sales, we ensure your solar plant runs efficiently over its full lifespan.
+                </p>
+                <h4>What we deliver</h4>
+                <p>
+                  Our turnkey service includes feasibility study, system design, government approvals, supply of quality components, installation, commissioning, and after-sales O&M. We offer both CAPEX and OPEX models, with detailed ROI analysis and payback calculations tailored to your site and energy needs.
+                </p>
                 <ul>
                   <li>
-                    <i className="fa-solid fa-check"></i> Creating a Bananced And Nutritions
+                    <i className="fa-solid fa-check" /> Feasibility study and site assessment
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> The importance Of staying Hydraed
+                    <i className="fa-solid fa-check" /> System design and technology selection
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> The Link Between Mental Health
+                    <i className="fa-solid fa-check" /> Government approvals and regulatory support
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> How to get Enough Sleep
+                    <i className="fa-solid fa-check" /> Supply, installation, and commissioning
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <i className="fa-solid fa-check"></i> Staying Hydrated
+                    <i className="fa-solid fa-check" /> O&M and long-term performance monitoring
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> Meditation And Mindfunlness
+                    <i className="fa-solid fa-check" /> Financial modelling and investment structuring
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> Creating a Balanced Diet
+                    <i className="fa-solid fa-check" /> Customized solutions for C&I and residential
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> Positive Thinking And Health
+                    <i className="fa-solid fa-check" /> Transparent pricing and quality components
                   </li>
                 </ul>
-                <p>Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lore ipsum dolor sit amet, consectetur adipiscing elit. In hac habit asse pla dictumst. Duis porta, quam ut finibus ultrices, lorem lacus</p>
+                <p>
+                  Operating across Jaipur, Kishangarh, Neemrana, Udaipur, Haryana, and Gujarat, we support clients with rooftop and ground-mounted solar systems. Contact us for a free consultation or feasibility study.
+                </p>
               </div>
             </div>
             <div className="col-lg-4 col-sm-12 col-xs-12">
@@ -62,54 +68,45 @@ const ProjectDetails = () => {
                 <div className="spdi_info">
                   <div className="spdi_info_details">
                     <span>Category:</span>
-                    <p>Corporate, Business</p>
+                    <p>Commercial, Industrial</p>
                   </div>
                   <div className="spdi_info_details">
                     <span>Company:</span>
-                    <p>Kauya kader</p>
+                    <p>Bhuvanya Energy Pvt. Ltd.</p>
                   </div>
                 </div>
                 <div className="spdi_info">
                   <div className="spdi_info_details">
-                    <span>Start date:</span>
-                    <p>04 June 2024</p>
-                  </div>
-                  <div className="spdi_info_details">
-                    <span>End Date:</span>
-                    <p>29 December 2025</p>
+                    <span>Service regions:</span>
+                    <p>Jaipur · Kishangarh · Neemrana · Udaipur · Haryana · Gujarat</p>
                   </div>
                 </div>
                 <div className="spdi_info">
                   <div className="spdi_social_rat">
                     <h4>
                       Rating:
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
+                      <i className="fa-solid fa-star" />
                     </h4>
                   </div>
                   <div className="spdi_social">
                     <ul>
                       <li>
-                        <a href="#">
-                          <i className="fa-brands fa-facebook"></i>
+                        <a href={company.whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                          <i className="fa-brands fa-whatsapp" />
                         </a>
                       </li>
                       <li>
-                        <a href="#">
-                          <i className="fa-brands fa-x-twitter"></i>
+                        <a href={company.instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram">
+                          <i className="fa-brands fa-instagram" />
                         </a>
                       </li>
                       <li>
-                        <a href="#">
-                          <i className="fa-brands fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fa-brands fa-pinterest"></i>
+                        <a href={company.linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                          <i className="fa-brands fa-linkedin" />
                         </a>
                       </li>
                     </ul>

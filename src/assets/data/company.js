@@ -1,6 +1,7 @@
 /** Content sourced from BEPL Company Profile (Bhuvanya Energy Pvt. Ltd.) */
 
 export const company = {
+  /** Official brand mark — `public/images/about-us/logo.png` */
   logoUrl: "/images/about-us/logo.png",
   legalName: "Bhuvanya Energy Pvt. Ltd.",
   shortName: "BEPL",
@@ -10,6 +11,10 @@ export const company = {
   email: "bhuvanyasolarenergy@gmail.com",
   phoneDisplay: "+91 9079 77 99 59",
   phoneTel: "+919079779959",
+  /** Social & messaging */
+  whatsappUrl: "https://wa.me/919079779959",
+  instagramUrl: "https://www.instagram.com/bhuvanyaenergy/",
+  linkedinUrl: "https://www.linkedin.com/company/bhuvanyaenergy/",
   /** Office address from company profile */
   addressLines: [
     "Office No. CK-09, 3rd Floor, Capital Highstreet Mall",

@@ -1,0 +1,282 @@
+/* ----------------------------------------
+  FAQ Page — World-class design
+---------------------------------------- */
+$faq-primary: #0d2137;
+$faq-primary-light: #165bcc;
+$faq-text: #1f2937;
+$faq-text-muted: #6b7280;
+$faq-bg: #f8fafc;
+$faq-card-bg: #ffffff;
+$faq-border: #e5e7eb;
+
+.faq-hero {
+  position: relative;
+  padding: 4rem 0 3.5rem;
+  min-height: 32vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media #{$small_mobile} {
+    padding: 3rem 0 2.5rem;
+    min-height: 28vh;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0d2137 0%, #1e3a5f 50%, #165bcc 100%);
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/images/dots.png") repeat;
+      opacity: 0.06;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+  }
+
+  &__breadcrumb {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+
+    a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__separator {
+    margin: 0 0.5rem;
+    opacity: 0.5;
+  }
+
+  &__title {
+    font-family: Exo, sans-serif;
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.faq-section {
+  padding: 4rem 0 5rem;
+  background: $faq-bg;
+
+  @media #{$small_mobile} {
+    padding: 2.5rem 0 3rem;
+  }
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3rem;
+  align-items: start;
+
+  @media #{$tab_device} {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-accordion {
+  &__item {
+    background: $faq-card-bg;
+    border-radius: 12px;
+    border: 1px solid $faq-border;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header {
+    margin: 0;
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $faq-primary;
+    transition: background 0.2s;
+
+    &:hover {
+      background: rgba($faq-primary-light, 0.04);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &.collapsed .faq-accordion__icon {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__question {
+    flex: 1;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $faq-primary-light;
+    font-size: 0.875rem;
+    transition: transform 0.25s ease;
+
+    .faq-accordion__btn:not(.collapsed) & {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__body {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: $faq-text-muted;
+  }
+
+  .accordion-collapse {
+    border: none;
+  }
+}
+
+.faq-sidebar {
+  position: sticky;
+  top: 100px;
+
+  @media #{$tab_device} {
+    position: static;
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: $faq-primary-light;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__number {
+    font-family: Exo, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  &__label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    opacity: 0.95;
+  }
+
+  &__contact {
+    background: $faq-card-bg;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid $faq-border;
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: $faq-primary;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: $faq-text-muted;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: $faq-primary-light;
+    color: #fff !important;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+
+    &:hover {
+      background: darken($faq-primary-light, 8%);
+      color: #fff !important;
+    }
+
+    &--outline {
+      background: transparent;
+      color: $faq-primary-light !important;
+      border: 1px solid $faq-primary-light;
+
+      &:hover {
+        background: rgba($faq-primary-light, 0.08);
+        color: $faq-primary-light !important;
+      }
+    }
+  }
+}

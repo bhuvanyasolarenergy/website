@@ -1,4 +1,6 @@
+import { company } from "@/assets/data/company";
 import Slider from "react-slick";
+
 const Sponsor = () => {
   const settings = {
     dots: false,
@@ -37,22 +39,22 @@ const Sponsor = () => {
     <div className="srex-sponsor srex-section">
       <div className="container">
         <Slider {...settings} className="srex-sponsor__items ">
-          <a href="#" className="zirox-brand__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="zirox-brand__items-item">
             <img src="/images/sponsor/sponsor-2.png" alt="Envato" />
           </a>
-          <a href="#" className="zirox-brand__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="zirox-brand__items-item">
             <img src="/images/sponsor/sponsor-3.png" alt="Envato" />
           </a>
-          <a href="#" className="zirox-brand__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="zirox-brand__items-item">
             <img src="/images/sponsor/sponsor-4.png" alt="Envato" />
           </a>
-          <a href="#" className="zirox-brand__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="zirox-brand__items-item">
             <img src="/images/sponsor/sponsor-2.png" alt="Envato" />
           </a>
-          <a href="#" className="zirox-brand__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="zirox-brand__items-item">
             <img src="/images/sponsor/sponsor-3.png" alt="Envato" />
           </a>
-          <a href="#" className="zirox-brand__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="zirox-brand__items-item">
             <img src="/images/sponsor/sponsor-4.png" alt="Envato" />
           </a>
         </Slider>

@@ -1,10 +1,12 @@
+import { clientTestimonials } from "@/assets/data/testimonials";
 import Slider from "react-slick";
+
 const Testimonial = () => {
   const settings = {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 6000,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
@@ -20,38 +22,22 @@ const Testimonial = () => {
               </div>
 
               <Slider {...settings} className="srex-testimonial-one__slider ">
-                <div className="srex-testimonial-one__slider__item">
-                  <img src="/images/quote.svg" alt="Quote" className="srex-testimonial-one__slider__item__quote" />
-                  <p className="srex-testimonial-one__slider__item__text">&quot;Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Duis porta, quam ut finibus ultrices, lorem lacus</p>
-                  <div className="srex-testimonial-one__slider__item__author">
-                    <h3>John Doe</h3>
-                    <p>CEO, WindVista Solutions</p>
+                {clientTestimonials.map(({ quote, name, role }) => (
+                  <div key={name} className="srex-testimonial-one__slider__item">
+                    <img src="/images/quote.svg" alt="" className="srex-testimonial-one__slider__item__quote" />
+                    <p className="srex-testimonial-one__slider__item__text">&quot;{quote}&quot;</p>
+                    <div className="srex-testimonial-one__slider__item__author">
+                      <h3>{name}</h3>
+                      <p>{role}</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="srex-testimonial-one__slider__item">
-                  <img src="/images/quote.svg" alt="Quote" className="srex-testimonial-one__slider__item__quote" />
-                  <p className="srex-testimonial-one__slider__item__text">&quot;Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Duis porta, quam ut finibus ultrices, lorem lacus</p>
-                  <div className="srex-testimonial-one__slider__item__author">
-                    <h3>MH Imon</h3>
-                    <p>CEO, ultraDevs</p>
-                  </div>
-                </div>
-
-                <div className="srex-testimonial-one__slider__item">
-                  <img src="/images/quote.svg" alt="Quote" className="srex-testimonial-one__slider__item__quote" />
-                  <p className="srex-testimonial-one__slider__item__text">&quot;Nullam vel nibh facilisis lectus fermentum ultrices quis non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Duis porta, quam ut finibus ultrices, lorem lacus</p>
-                  <div className="srex-testimonial-one__slider__item__author">
-                    <h3>MD Arifuzzaman</h3>
-                    <p>CEO, Creativilo</p>
-                  </div>
-                </div>
+                ))}
               </Slider>
             </div>
           </div>
           <div className="col-lg-5 col-12">
             <div className="srex-testimonial-one__right">
-              <img src="/images/home-one/testimonial/testimonial-right.png" alt="Testimonial" className="srex-testimonial-one__right__img" />
+              <img src="/images/home-one/testimonial/testimonial-right.png" alt="" className="srex-testimonial-one__right__img" />
             </div>
           </div>
         </div>

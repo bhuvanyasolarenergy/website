@@ -1,4 +1,6 @@
+import { company } from "@/assets/data/company";
 import Slider from "react-slick";
+
 const Sponsor = () => {
   const settings = {
     dots: false,
@@ -37,19 +39,19 @@ const Sponsor = () => {
     <div className="srex-sponsor srex-sponsor-two srex-section ">
       <div className="container">
         <Slider {...settings} className="srex-sponsor__items ">
-          <a href="#" className="srex-sponsor__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="srex-sponsor__items-item">
             <img src="/images/home-two/sponsor/sponsor-1.png" alt="Sponsor" />
           </a>
-          <a href="#" className="srex-sponsor__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="srex-sponsor__items-item">
             <img src="/images/home-two/sponsor/sponsor-2.png" alt="Sponsor" />
           </a>
-          <a href="#" className="srex-sponsor__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="srex-sponsor__items-item">
             <img src="/images/home-two/sponsor/sponsor-3.png" alt="Sponsor" />
           </a>
-          <a href="#" className="srex-sponsor__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="srex-sponsor__items-item">
             <img src="/images/home-two/sponsor/sponsor-4.png" alt="Sponsor" />
           </a>
-          <a href="#" className="srex-sponsor__items-item">
+          <a href={company.website} target="_blank" rel="noreferrer" className="srex-sponsor__items-item">
             <img src="/images/home-two/sponsor/sponsor-5.png" alt="Sponsor" />
           </a>
         </Slider>

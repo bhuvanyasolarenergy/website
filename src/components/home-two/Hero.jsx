@@ -15,9 +15,9 @@ const Hero = () => {
             Bhuvanya Energy Pvt. Ltd. helps you generate clean electricity with rooftop and commercial solar—expert design, quality components, and support from Jaipur.
           </p>
           <div data-aos="fade-up" data-aos-delay="600" className="d-flex gap-4 ">
-            <a href="#" className="srex-btn srex-btn--secondary">
+            <Link to="/about" className="srex-btn srex-btn--secondary">
               Discover More <i className="fa-solid fa-plus"></i>
-            </a>
+            </Link>
             <Link to="/services" className="srex-btn srex-btn--outline">
               All Services <i className="fa-solid fa-plus"></i>
             </Link>

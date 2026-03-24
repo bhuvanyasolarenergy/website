@@ -24,18 +24,17 @@ Table of Contents
 09/ Services
 10/ About US
 11/ Features
-12/ Video
-13/ Contact
-14/ Portfolio
-15/ Sponsor
-16/ FAQ
-17/ News Letter
-18/ Stats
-19/ Testimonial
-20/ Blog
-21/ Footer
-22/ Support
-23/ Pricing
+12/ Contact
+13/ Portfolio
+14/ Sponsor
+15/ FAQ
+16/ News Letter
+17/ Stats
+18/ Testimonial
+19/ Blog
+20/ Footer
+21/ Support
+22/ Pricing
 
 ====================================
 **/
@@ -96,61 +95,56 @@ Table of Contents
 @import "features/features";
 
 /*------------------------------------
-	12/ Features
-------------------------------------*/
-@import "video/video";
-
-/*------------------------------------
-	13/ Contact
+	12/ Contact
 ------------------------------------*/
 @import "contact/contact";
 
 /*------------------------------------
-	14/ Portfolio
+	13/ Portfolio
 ------------------------------------*/
 @import "portfolio/portfolio";
 
 /*------------------------------------
-	15/ Sponsor
+	14/ Sponsor
 ------------------------------------*/
 @import "sponsor/sponsor";
 
 /*------------------------------------
-	16/ FAQ
+	15/ FAQ
 ------------------------------------*/
 @import "faq/faq";
 
 /*------------------------------------
-	17/ News Letter
+	16/ News Letter
 ------------------------------------*/
 @import "news-letter/news-letter";
 
 /*------------------------------------
-	18/ Stats
+	17/ Stats
 ------------------------------------*/
 @import "stats/stats";
 
 /*------------------------------------
-	19/ Testimonial
+	18/ Testimonial
 ------------------------------------*/
 @import "testimonial/testimonial";
 
 /*------------------------------------
-	20/ Blog
+	19/ Blog
 ------------------------------------*/
 @import "blog/blog";
 /*------------------------------------
-	21/ Footer
+	20/ Footer
 ------------------------------------*/
 @import "footer/footer";
 
 /*------------------------------------
-	22/ Support - 2
+	21/ Support - 2
 ------------------------------------*/
 @import "support/support";
 
 /*------------------------------------
-	23/ Pricing
+	22/ Pricing
 ------------------------------------*/
 @import "pricing/pricing";
 
@@ -159,3 +153,30 @@ Table of Contents
 
 // ---------------------------------------- */
 @import "../../../node_modules/aos/src/sass/aos.scss";
+
+/* ----------------------------------------
+	25 WhatsApp Floating Button
+---------------------------------------- */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.75rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+  }
+}

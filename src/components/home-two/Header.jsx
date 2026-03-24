@@ -39,16 +39,13 @@ const Header = () => {
             <div className="col-6 col-md-4">
               <ul>
                 <li>
-                  <a href="">
-                    <i className="fa-brands fa-facebook"></i>
+                  <a href={company.whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                    <i className="fa-brands fa-whatsapp"></i>
                   </a>
-                  <a href="">
+                  <a href={company.instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram">
                     <i className="fa-brands fa-instagram"></i>
                   </a>
-                  <a href="">
-                    <i className="fa-brands fa-x-twitter"></i>
-                  </a>
-                  <a href="">
+                  <a href={company.linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn">
                     <i className="fa-brands fa-linkedin"></i>
                   </a>
                 </li>
@@ -77,7 +74,7 @@ const Header = () => {
                         <Link to={url}>{title}</Link>
                       ) : (
                         <>
-                          <a href="#">
+                          <a href="#" onClick={(e) => { e.preventDefault(); handleOpenSubmenu(id); }}>
                             {title} <i className="fa-solid fa-angle-down"></i>
                           </a>
                           <ul className="ud-main-menu__sub-menu">
@@ -131,7 +128,7 @@ const Header = () => {
                     <Link to={url}>{title}</Link>
                   ) : (
                     <>
-                      <a href="#" onClick={() => handleOpenSubmenu(id)}>
+                      <a href="#" onClick={(e) => { e.preventDefault(); handleOpenSubmenu(id); }}>
                         {title} <i className="fa-solid fa-plus"></i>
                       </a>
                       <AnimateHeight height={openedSubmenu == id ? "auto" : 0}>
@@ -183,23 +180,18 @@ const Header = () => {
             </div>
             <ul className="ud-side-popup__bottom-socials">
               <li>
-                <a href="#">
-                  <i className="fa-brands fa-facebook-f"></i>
+                <a href={company.whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp">
+                  <i className="fa-brands fa-whatsapp"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i className="fa-brands fa-x-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
+                <a href={company.instagramUrl} target="_blank" rel="noreferrer" aria-label="Instagram">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <i className="fa-brands fa-youtube"></i>
+                <a href={company.linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <i className="fa-brands fa-linkedin"></i>
                 </a>
               </li>
             </ul>

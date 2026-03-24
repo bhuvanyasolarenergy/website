@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <section className="srex-hero-one">
@@ -17,9 +19,9 @@ const Hero = () => {
                 Bhuvanya Energy Pvt. Ltd. designs and delivers solar projects for homes, businesses, and industry—helping you save costs and switch to reliable renewable energy.
               </p>
 
-              <a data-aos="fade-up" data-aos-delay="500" href="#" className="srex-btn srex-btn--outline">
+              <Link data-aos="fade-up" data-aos-delay="500" to="/services" className="srex-btn srex-btn--outline">
                 Discover More <i className="fa-solid fa-plus"></i>
-              </a>
+              </Link>
             </div>
             <div className="d-flex gap-2 align-items-center justify-content-between ">
               <div className="srex-hero-one__left__enery__efficient">
