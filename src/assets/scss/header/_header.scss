@@ -71,10 +71,16 @@
     @media #{$tab_device} {
         padding: 20px;
     }
+    @media only screen and (min-width: 992px) {
+        padding: 12px 0;
+    }
     &.sticky-top {
         padding: 0;
         @media #{$small_mobile} {
             padding: 15px;
+        }
+        @media only screen and (min-width: 992px) {
+            padding: 10px 0;
         }
     }
 
