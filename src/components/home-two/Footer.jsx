@@ -48,7 +48,7 @@ const Footer = () => {
               <div className="srex-footer-two__links__logo">
                 <img src={company.logoUrl} alt={company.legalName} />
                 <p className="srex-footer-two__links__logo__text">
-                  {company.legalName} — turnkey solar for homes and businesses. Serving {company.serviceRegions}.
+                  {company.legalName} — Solar PV, BESS, turnkey EPC, and end-to-end consultancy. Serving SECI, NTPC, RVUNL, DISCOMs, IPPs, and C&amp;I clients pan-India.
                 </p>
                 <ul className="srex-footer-two__links__social_links">
                   <li>
@@ -99,16 +99,16 @@ const Footer = () => {
                 <div className="srex-footer__links__content">
                   <ul className="srex-footer__links__list">
                     <li>
-                      <Link to="/services">Rooftop solar</Link>
+                      <Link to="/services">Turnkey Solar EPC</Link>
                     </li>
                     <li>
-                      <Link to="/services">Commercial solar</Link>
+                      <Link to="/services">Turnkey BESS EPC</Link>
                     </li>
                     <li>
-                      <Link to="/services">Industrial solar</Link>
+                      <Link to="/services">Solar &amp; BESS Consultancy</Link>
                     </li>
                     <li>
-                      <Link to="/services">EPC services</Link>
+                      <Link to="/services">Factory Setup Consultancy</Link>
                     </li>
                     <li>
                       <Link to="/services">O&amp;M support</Link>

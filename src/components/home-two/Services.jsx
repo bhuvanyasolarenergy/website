@@ -9,7 +9,7 @@ const icons = [
 ];
 
 const Services = () => {
-  const items = company.consultancyOfferings.slice(0, 4);
+  const items = company.coreServices.slice(3, 7);
 
   return (
     <section className="srex-service-three srex-section">
@@ -19,13 +19,15 @@ const Services = () => {
             <div className="srex-service-three__left ">
               <div className="srex-section__head">
                 <h5 data-aos="fade-up" className="srex-section__head__badge ">
-                  Consultancy &amp; engineering
+                  Investment, factory setup &amp; advisory
                 </h5>
                 <h2 data-aos="fade-up" data-aos-delay="300" className="srex-section__head__title ">
-                  How we support your solar investment
+                  Beyond EPC — manufacturing, investment &amp; consultancy
                 </h2>
                 <p data-aos="fade-up" data-aos-delay="600" className="mb-5 ">
-                  {company.elevatorPitch}
+                  We support investors and developers with greenfield BESS factory setup,
+                  bankable IPP opportunities, long-term O&amp;M, and management advisory for
+                  renewable energy ventures.
                 </p>
                 <Link to="/services" className="srex-btn srex-btn--primary">
                   View all services <i className="fa-solid fa-plus"></i>
@@ -36,10 +38,10 @@ const Services = () => {
           <div className="col-lg-6 col-12">
             <div className="srex-info-box">
               <div className="row">
-                {items.map(({ title, text }, i) => (
+                {items.map(({ title, summary }, i) => (
                   <div
                     data-aos="fade-up"
-                    data-aos-delay={i === 0 ? undefined : String(i * 300)}
+                    data-aos-delay={i === 0 ? undefined : String(i * 200)}
                     key={title}
                     className="col-md-6 col-12"
                   >
@@ -50,9 +52,9 @@ const Services = () => {
                         </div>
                       </div>
                       <h3 className="srex-info-box__item__text">{title}</h3>
-                      <p className="mb-3">{text}</p>
+                      <p className="mb-3">{summary}</p>
                       <div className="srex-info-box__more">
-                        <Link to="/service-details">
+                        <Link to="/services">
                           Read More
                           <i className="fa-solid fa-arrow-right"></i>
                         </Link>

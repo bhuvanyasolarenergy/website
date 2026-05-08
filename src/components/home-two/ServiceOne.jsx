@@ -19,7 +19,7 @@ const ServiceOne = () => {
             What we offer
           </h5>
           <h2 data-aos="fade-up" data-aos-delay="200" className="srex-section__head__title">
-            Turnkey solar — consultancy through commissioning &amp; O&amp;M
+            Turnkey Solar &amp; BESS — consultancy through commissioning
           </h2>
         </div>
         <div className="srex-info-box">
@@ -53,26 +53,26 @@ const ServiceOne = () => {
                 <div data-aos="fade-up" className="col-md-6 col-lg-3 col-12">
                   <div className="srex-stats__item">
                     <div className="srex-stats__item__icon">
-                      <img src="/images/home-one/stats/awards.svg" alt="" />
+                      <img src="/images/home-one/stats/projects.svg" alt="" />
                     </div>
                     <div className="srex-stats__item__text">
                       <h2>
-                        <span className="counter">14</span>+
+                        <span className="counter">{company.stats.totalProjects}</span>+
                       </h2>
-                      <h3>Years in power &amp; solar</h3>
+                      <h3>Solar projects delivered</h3>
                     </div>
                   </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="200" className="col-md-6 col-lg-3 col-12">
                   <div className="srex-stats__item">
                     <div className="srex-stats__item__icon">
-                      <img src="/images/home-one/stats/projects.svg" alt="" />
+                      <img src="/images/home-one/stats/awards.svg" alt="" />
                     </div>
                     <div className="srex-stats__item__text">
                       <h2>
-                        <span className="counter">9</span>+
+                        <span className="counter">{company.stats.totalProjectCapacityMw}</span> MW
                       </h2>
-                      <h3>Years focused on solar</h3>
+                      <h3>Installed capacity</h3>
                     </div>
                   </div>
                 </div>
@@ -83,9 +83,9 @@ const ServiceOne = () => {
                     </div>
                     <div className="srex-stats__item__text">
                       <h2>
-                        <span className="counter">2</span>
+                        <span className="counter">3</span>
                       </h2>
-                      <h3>Leadership &amp; co-founder team</h3>
+                      <h3>Directors leading BEPL</h3>
                     </div>
                   </div>
                 </div>
@@ -96,9 +96,9 @@ const ServiceOne = () => {
                     </div>
                     <div className="srex-stats__item__text">
                       <h2>
-                        <span className="counter">6</span>
+                        <span className="counter">35</span>+
                       </h2>
-                      <h3>States &amp; regions served</h3>
+                      <h3>Years combined experience</h3>
                     </div>
                   </div>
                 </div>

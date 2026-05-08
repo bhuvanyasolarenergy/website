@@ -9,17 +9,19 @@ const Hero = () => {
             BHUVANYA <span>ENERGY</span>
           </h1>
           <h2 data-aos="fade-up" data-aos-delay="200" className="">
-            Solar for a better future
+            Solar PV, BESS &amp; turnkey consultancy
           </h2>
           <p data-aos="fade-up" data-aos-delay="400" className="">
-            Bhuvanya Energy Pvt. Ltd. helps you generate clean electricity with rooftop and commercial solar—expert design, quality components, and support from Jaipur.
+            End-to-end Solar PV and Battery Energy Storage System (BESS) services — from feasibility
+            and tender support to EPC, commissioning, O&amp;M, and BESS factory setup. Trusted by
+            industrial clients and aligned with SECI, NTPC, and DISCOM tenders.
           </p>
           <div data-aos="fade-up" data-aos-delay="600" className="d-flex gap-4 ">
-            <Link to="/about" className="srex-btn srex-btn--secondary">
-              Discover More <i className="fa-solid fa-plus"></i>
+            <Link to="/services" className="srex-btn srex-btn--secondary">
+              Our Services <i className="fa-solid fa-plus"></i>
             </Link>
-            <Link to="/services" className="srex-btn srex-btn--outline">
-              All Services <i className="fa-solid fa-plus"></i>
+            <Link to="/projects" className="srex-btn srex-btn--outline">
+              Featured Projects <i className="fa-solid fa-plus"></i>
             </Link>
           </div>
         </div>

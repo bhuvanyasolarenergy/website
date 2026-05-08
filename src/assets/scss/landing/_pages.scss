@@ -1,0 +1,709 @@
+/* ----------------------------------------
+  Inner pages — Services, Projects, polish
+---------------------------------------- */
+
+/* Metrics rows without top label pseudo-element (About, Projects strips) */
+.ld-metrics.ld-metrics--simple {
+  .ld-metrics__item::before {
+    display: none;
+  }
+
+  .ld-metrics__item .value {
+    margin-top: 0;
+  }
+
+  .ld-metrics__item {
+    padding: 32px 28px 40px;
+
+    @media (max-width: 768px) {
+      padding: 24px 20px 32px;
+    }
+  }
+}
+
+/* ——— Services page ——— */
+.page-services {
+  .ld-services--page {
+    background: linear-gradient(180deg, $ld-bg 0%, $ld-bg-warm 100%);
+  }
+}
+
+.services-page-intro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px 22px;
+    background: $ld-surface;
+    border: 1px solid $ld-line;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px -18px rgba(19, 33, 61, 0.2);
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 64, 175, 0.12),
+      rgba(245, 158, 11, 0.12)
+    );
+    color: $ld-brand;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $ld-ink;
+    margin: 0 0 4px;
+    letter-spacing: -0.02em;
+  }
+
+  &__text {
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: $ld-muted;
+    margin: 0;
+  }
+}
+
+.services-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+
+  .services-page-card--featured {
+    grid-column: 1 / -1;
+  }
+}
+
+.services-page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  background: $ld-surface;
+  border: 1px solid $ld-line;
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease,
+    transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover,
+  &:focus-visible {
+    border-color: rgba(30, 64, 175, 0.28);
+    box-shadow: 0 20px 40px -22px rgba(19, 33, 61, 0.28);
+    transform: translateY(-2px);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .services-page-card__cover img {
+      transform: scale(1.04);
+    }
+
+    .services-page-card__arrow {
+      color: $ld-brand;
+      gap: 10px;
+
+      i {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $ld-brand, $ld-amber);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+  }
+
+  &--featured {
+    &::before {
+      opacity: 1;
+    }
+
+    background: linear-gradient(
+      135deg,
+      rgba(30, 64, 175, 0.04),
+      $ld-surface 46%
+    );
+
+    .services-page-card__main {
+      @media (min-width: 993px) {
+        grid-template-columns: 100px 1fr auto;
+      }
+    }
+  }
+
+  &__cover {
+    position: relative;
+    aspect-ratio: 2 / 1;
+    max-height: 220px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(255, 255, 255, 0.35) 100%
+      );
+      pointer-events: none;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 20px 24px;
+    align-items: start;
+    padding: 22px 24px 24px;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  }
+
+  &__figure {
+    width: 88px;
+    height: 88px;
+    border-radius: 12px;
+    background: $ld-tint;
+    border: 1px solid $ld-line;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    @media (max-width: 600px) {
+      width: 72px;
+      height: 72px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  &__idx {
+    @include ld-mono;
+    color: $ld-muted;
+    font-size: 10px;
+  }
+
+  &__title {
+    @include ld-h3;
+    font-size: 1.1875rem;
+    margin: 0;
+  }
+
+  &__summary {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: $ld-muted;
+    margin: 0;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $ld-ink;
+    letter-spacing: -0.01em;
+    transition: color 0.2s ease, gap 0.2s ease;
+
+    i {
+      font-size: 11px;
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &__cta-side {
+    align-self: center;
+    padding-right: 0;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+/* Project type cards on services page */
+.ld-types.ld-types--cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background: transparent;
+  border: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .ld-types__item {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid $ld-line;
+    box-shadow: 0 14px 32px -20px rgba(19, 33, 61, 0.22);
+
+    .ld-types__thumb {
+      aspect-ratio: 16 / 8;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .ld-types__content {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 22px 24px 24px;
+    }
+
+    .num {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(30, 64, 175, 0.08);
+      color: $ld-brand;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/* ——— Projects page ——— */
+.projects-spotlight {
+  margin-bottom: 56px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding: 0;
+    background: $ld-surface;
+    border: 1px solid $ld-line;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      border-color: rgba(30, 64, 175, 0.22);
+      box-shadow: 0 18px 36px -24px rgba(19, 33, 61, 0.28);
+
+      .projects-spotlight__thumb img {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &__thumb {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  }
+
+  &__cap {
+    font-family: "Inter", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: $ld-ink;
+    line-height: 1;
+    margin: 18px 20px 6px;
+
+    span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $ld-amber-deep;
+      margin-left: 4px;
+    }
+  }
+
+  &__client {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $ld-ink-soft;
+    line-height: 1.35;
+    margin: 0 20px 10px;
+  }
+
+  &__sector,
+  &__segment {
+    @include ld-mono;
+    font-size: 10px;
+    color: $ld-muted;
+    margin: 0 20px 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $ld-brand, $ld-amber);
+    border-radius: 0 3px 0 0;
+    opacity: 0.85;
+  }
+}
+
+/* Unified portfolio index (single ranked table — not sector buckets) */
+.projects-index-wrap {
+  border-radius: 16px;
+  border: 1px solid rgba(30, 64, 175, 0.12);
+  background: $ld-surface;
+  box-shadow: 0 24px 56px -36px rgba(19, 33, 61, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects-index {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "Inter", sans-serif;
+
+  thead {
+    background: linear-gradient(
+      180deg,
+      rgba(30, 64, 175, 0.06) 0%,
+      rgba(248, 250, 255, 0.96) 100%
+    );
+    border-bottom: 1px solid $ld-line;
+  }
+
+  th {
+    @include ld-mono;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $ld-muted;
+    text-align: left;
+    padding: 16px 20px;
+    white-space: nowrap;
+
+    &:first-child {
+      padding-left: 24px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+
+  &__th-rank {
+    width: 72px;
+  }
+
+  &__th-cap {
+    text-align: right;
+    width: 140px;
+  }
+
+  &__th-seg {
+    width: 160px;
+
+    @media (max-width: 600px) {
+      width: 120px;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid $ld-line-soft;
+    transition: background 0.18s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(251, 191, 36, 0.06),
+        rgba(30, 64, 175, 0.04) 55%,
+        transparent 100%
+      );
+    }
+  }
+
+  td {
+    padding: 18px 20px;
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left: 24px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+
+  &__rank {
+    @include ld-mono;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: $ld-amber-deep;
+  }
+
+  &__name {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: $ld-ink;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+  }
+
+  &__cap {
+    text-align: right;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__cap-num {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: $ld-ink;
+  }
+
+  &__cap-unit {
+    @include ld-mono;
+    margin-left: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: $ld-muted;
+  }
+
+  &__seg {
+    text-align: right;
+  }
+
+  &__pill {
+    display: inline-block;
+    max-width: 100%;
+    padding: 6px 11px;
+    border-radius: 999px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $ld-muted;
+    background: $ld-tint;
+    border: 1px solid $ld-line;
+    line-height: 1.2;
+  }
+}
+
+/* Hero pillar links (light theme) */
+.ld-hero__pillar-link {
+  color: $ld-ink-soft !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $ld-brand !important;
+  }
+}
+
+/* FAQ page: stronger containment */
+.faq-page {
+  padding: 8px 0 24px;
+
+  .ld-faq__list {
+    background: $ld-surface;
+    border: 1px solid $ld-line;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .ld-faq__item {
+    border-bottom-color: $ld-line-soft;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .ld-faq__btn {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .ld-faq__answer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Contact map framed */
+.contact-map {
+  border-top: 1px solid $ld-line;
+
+  iframe {
+    filter: grayscale(0.15) contrast(1.02);
+  }
+}
+
+/* Contact page: lift form panel */
+.page-contact {
+  .contact-grid__form-wrap {
+    background: $ld-surface;
+    border: 1px solid $ld-line;
+    border-radius: 14px;
+    padding: 32px 32px 40px;
+    box-shadow: 0 18px 40px -28px rgba(19, 33, 61, 0.18);
+
+    @media (max-width: 992px) {
+      padding: 24px 20px 32px;
+    }
+  }
+
+  .contact-grid__side {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+
+    @media (max-width: 992px) {
+      position: static;
+    }
+  }
+}
+
+/* Blog listing rhythm */
+.page-blog {
+  .blog-feature {
+    padding: 8px 0 16px;
+  }
+}
+/* Blog article — readable column */
+.page-blog-detail {
+  .article-body {
+    background: $ld-surface;
+    border: 1px solid $ld-line;
+    border-radius: 14px;
+    padding: 40px 48px 48px;
+    box-shadow: 0 20px 48px -32px rgba(19, 33, 61, 0.2);
+
+    @media (max-width: 768px) {
+      padding: 28px 22px 36px;
+    }
+  }
+
+  .article-body__prose p:first-of-type {
+    font-size: 1.125rem;
+    color: $ld-ink-soft;
+  }
+}
+
+/* Projects: second header after spotlight */
+.ld-section__header--ledger-follows {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}

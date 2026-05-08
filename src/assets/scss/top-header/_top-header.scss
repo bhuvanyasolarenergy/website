@@ -1,24 +1,41 @@
 .srex-top-header {
-  background: #e8eef9;
-  padding: 15px 0 15px 0;
+  background: #0a1929;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
   @media #{$small_mobile} {
-    padding: 15px 10px;
+    padding: 10px;
   }
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
+
   p {
-    color: #24231d;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+
     @media #{$small_mobile} {
-      font-size: 10px;
+      font-size: 11px;
     }
   }
+
   ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    list-style: none;
+
     li {
       a {
-        padding: 0 12px;
+        padding: 0 8px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #fbbf24;
+        }
+
         &:last-child {
           padding-right: 0;
         }

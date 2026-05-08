@@ -1,7 +1,9 @@
+import { company } from "@/assets/data/company";
+
 const stats = [
-  { value: "15+", label: "Years experience" },
-  { value: "6", label: "Service regions" },
-  { value: "100%", label: "Turnkey solutions" },
+  { value: `${company.stats.totalProjects}+`, label: "Solar projects delivered" },
+  { value: `${company.stats.totalProjectCapacityMw} MW`, label: "Installed capacity" },
+  { value: "35+", label: "Years combined leadership" },
 ];
 
 const AboutStats = () => {

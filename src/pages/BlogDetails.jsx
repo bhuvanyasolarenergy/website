@@ -1,92 +1,106 @@
-import { blogPosts } from "@/assets/data/blogs";
-import SectionTop from "@/components/shared/SectionTop";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { blogPosts } from "@/assets/data/blogs";
+import LandingCta from "@/components/landing/LandingCta";
 
 const BlogDetails = () => {
   const { id } = useParams();
   const post = blogPosts.find((p) => p.id === id) || blogPosts[0];
+  const more = blogPosts.filter((p) => p.id !== post.id).slice(0, 3);
 
   useEffect(() => {
-    document.title = `${post.title} | Bhuvanya Energy Blog`;
+    document.title = `${post.title} | Bhuvanya Energy`;
     return () => {
-      document.title = "Bhuvanya Energy Pvt. Ltd. | Solar & Energy Solutions";
+      document.title =
+        "Bhuvanya Energy Pvt. Ltd. | Solar PV, BESS & Turnkey Consultancy | Jaipur";
     };
   }, [post.title]);
 
   return (
-    <>
-      <SectionTop title={post.title} />
-      <section className="blog-page section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 col-sm-12 col-xs-12">
-              <article className="post-slide-blog post-single">
-                <div className="blog-img">
-                  <img src={post.image} className="img-fluid" alt={post.title} />
-                  <span>{post.date}</span>
-                </div>
-                <span className="post-meta">
-                  <i className="fa-regular fa-user"></i> {post.author} · <i className="fa-regular fa-calendar-days"></i> {post.date}
-                </span>
-                <h2>{post.title}</h2>
-                <div className="post-body">
-                  {post.body.map((para, i) => (
-                    <p key={i}>{para}</p>
-                  ))}
-                </div>
-              </article>
-            </div>
-            <div className="col-lg-4 col-sm-12 col-xs-12">
-              <div className="blog_search">
-                <h4 className="blog_sidebar_title">. Search</h4>
-                <input type="text" className="form-control" placeholder="Type &amp; Press Enter" />
-              </div>
-              <div className="categories">
-                <h4 className="blog_sidebar_title">. Categories</h4>
-                <ul>
-                  {[...new Set(blogPosts.map((p) => p.category))].map((cat) => (
-                    <li key={cat}>
-                      <Link to="/blogs">
-                        <i className="fa-solid fa-arrow-down"></i> {cat}{" "}
-                        <span>({blogPosts.filter((p) => p.category === cat).length})</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="latest_blog ">
-                <h4 className="blog_sidebar_title">. Latest Blog</h4>
-                {blogPosts.slice(0, 3).map((p) => (
-                  <div key={p.id} className="single_latest_blog">
-                    <img src={p.imageSmall} alt={p.title} />
-                    <span>
-                      <i className="fa-regular fa-calendar-days"></i> {p.date}
-                    </span>
-                    <Link to={`/blogs/${p.id}`}>{p.title}</Link>
-                  </div>
-                ))}
-              </div>
-              <div className="categories">
-                <h4 className="blog_sidebar_title">. Archive</h4>
-                <ul>
-                  <li>
-                    <Link to="/blogs">
-                      <i className="fa-solid fa-arrow-down"></i> March 2025
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blogs">
-                      <i className="fa-solid fa-arrow-down"></i> February 2025
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div className="page-blog-detail">
+      {/* Article hero */}
+      <section className="ld-hero ld-hero--article">
+        <div className="ld-hero__inner">
+          <p className="ld-hero__eyebrow">{post.category}</p>
+          <h1 className="ld-hero__title ld-hero__title--narrow">
+            {post.title}
+          </h1>
+          <p className="ld-hero__lede">{post.excerpt}</p>
+          <div className="article-meta">
+            <span>By {post.author}</span>
+            <span className="dot" />
+            <span>{post.date}</span>
           </div>
         </div>
       </section>
-    </>
+
+      {/* Article body */}
+      <section className="ld-section">
+        <div className="ld-section__inner">
+          <article className="article-body">
+            <div className="article-body__media">
+              <img src={post.image} alt={post.title} />
+            </div>
+            <div className="article-body__prose">
+              {post.body.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+            <div className="article-body__share">
+              <span>Share:</span>
+              <a href="#" aria-label="LinkedIn">
+                <i className="fa-brands fa-linkedin" />
+              </a>
+              <a href="#" aria-label="WhatsApp">
+                <i className="fa-brands fa-whatsapp" />
+              </a>
+              <a href="#" aria-label="Twitter">
+                <i className="fa-brands fa-twitter" />
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* More articles */}
+      {more.length > 0 && (
+        <section className="ld-section ld-section--tinted">
+          <div className="ld-section__inner">
+            <div className="ld-section__header ld-section__header--row">
+              <div>
+                <p className="eyebrow">More from BEPL</p>
+                <h2 className="title">Continue reading</h2>
+              </div>
+              <Link to="/blogs" className="ld-btn ld-btn--ghost">
+                All articles <i className="fa-solid fa-arrow-right" />
+              </Link>
+            </div>
+            <div className="blog-list">
+              {more.map((p) => (
+                <article key={p.id} className="blog-list__card">
+                  <Link to={`/blogs/${p.id}`} className="blog-list__media">
+                    <img src={p.image} alt={p.title} />
+                  </Link>
+                  <div className="blog-list__body">
+                    <div className="blog-list__meta">
+                      <span>{p.category}</span>
+                      <span className="dot" />
+                      <span>{p.date}</span>
+                    </div>
+                    <h3>
+                      <Link to={`/blogs/${p.id}`}>{p.title}</Link>
+                    </h3>
+                    <p>{p.excerpt}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <LandingCta variant="compact" />
+    </div>
   );
 };
 

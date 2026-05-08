@@ -11,7 +11,7 @@ const AboutUs = () => {
                 About Us
               </h5>
               <div data-aos="fade-up" data-aos-delay="200" className="d-flex align-content-center gap-5">
-                <h2 className="srex-section__head__title">Bhuvanya Energy — solar and power you can rely on</h2>
+                <h2 className="srex-section__head__title">Bhuvanya Energy — Solar PV, BESS &amp; turnkey consultancy</h2>
                 <img src="/images/frame.png" alt="About_Us_Frame" className="srex-about-us-two__img " />
               </div>
             </div>
@@ -21,18 +21,20 @@ const AboutUs = () => {
               </div>
               <div data-aos="fade-up" data-aos-delay="600" className="srex-about-us-two__left-content__right ">
                 <p>
-                  Bhuvanya Energy Pvt. Ltd. delivers end-to-end solar solutions—from rooftop systems for homes to large-scale installations for businesses—so you get quality
-                  components, transparent pricing, and dependable support from our team in Jaipur.
+                  Bhuvanya Energy Private Limited delivers end-to-end Solar PV and BESS solutions —
+                  from rooftop and C&amp;I systems to utility-scale installations and BESS factory
+                  setup. Engineering precision, regulatory compliance, and long-term performance
+                  optimisation, led from Jaipur.
                 </p>
                 <div className="srex-icon-list mt-3">
                   <ul>
                     <li>
                       <i className="fa-solid fa-check"></i>
-                      <p>Redefining Energy with Solar Technology</p>
+                      <p>Turnkey Solar &amp; BESS EPC under one roof</p>
                     </li>
                     <li>
                       <i className="fa-solid fa-check"></i>
-                      <p>Unleash the Power of the Sun</p>
+                      <p>Tender, MNRE / CEA / DISCOM compliance &amp; lender support</p>
                     </li>
                   </ul>
                 </div>
@@ -47,8 +49,8 @@ const AboutUs = () => {
             <div data-aos="fade-up" data-aos-delay="800" className="srex-about-us-two__box d-flex gap-3 ">
               <img src="/images/about-us/medal.png" alt="Medal" />
               <div className="srex-about-us-two__box__text">
-                <h2>15+ Years</h2>
-                <p>of experience</p>
+                <h2>35+ Years</h2>
+                <p>combined leadership in Solar &amp; BESS</p>
               </div>
             </div>
           </div>

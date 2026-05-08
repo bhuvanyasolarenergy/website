@@ -13,7 +13,7 @@ const AboutHero = () => {
             <span>About Us</span>
           </nav>
           <h1 className="about-hero__title">
-            Powering India&apos;s future with <em>clean energy</em>
+            Solar PV, BESS &amp; <em>turnkey consultancy</em>
           </h1>
           <p className="about-hero__tagline">{company.tagline}</p>
         </div>

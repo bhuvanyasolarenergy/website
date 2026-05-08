@@ -34,7 +34,7 @@ const Header = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-6 col-md-8">
-              <p>Bhuvanya Energy Pvt. Ltd. — solar and reliable energy solutions for homes and businesses.</p>
+              <p>Bhuvanya Energy Pvt. Ltd. — Solar PV, BESS, and end-to-end renewable energy consultancy.</p>
             </div>
             <div className="col-6 col-md-4">
               <ul>

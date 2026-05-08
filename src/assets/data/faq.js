@@ -1,44 +1,52 @@
-/** FAQ content sourced from BEPL Company Profile (Bhuvanya Energy Pvt. Ltd.) */
+/**
+ * FAQs sourced from BEPL Company Profile, Solar+BESS Consultancy proposal,
+ * and the 2 GWh BESS Factory presentation.
+ */
 
 export const faqItems = [
   {
-    question: "What services does Bhuvanya Energy offer?",
+    question: "What does Bhuvanya Energy actually do?",
     answer:
-      "Bhuvanya Energy provides end-to-end turnkey solar solutions including: solar consultancy (feasibility, financial modelling, technology selection), system designing, government approvals support, supply, installation, commissioning, and after-sales O&M (operations & maintenance). We cover residential, commercial, and industrial (C&I) installations with customized systems tailored to each client's needs.",
+      "We are a renewable energy consultancy and EPC firm specialising in Solar PV and Battery Energy Storage Systems (BESS). Our services span turnkey Solar EPC, turnkey BESS EPC, Solar & BESS consultancy, investment opportunities, O&M, factory setup consultancy (e.g. 2 GWh BESS manufacturing), and management consultancy.",
   },
   {
-    question: "What regions do you serve?",
+    question: "Do you handle full project lifecycle for Solar PV and BESS?",
     answer:
-      "We operate across Jaipur, Kishangarh, Neemrana, Udaipur, Haryana, and Gujarat. Our office is at Capital Highstreet Mall, Jagatpura, Jaipur. We support commercial and industrial clients across these regions for rooftop and ground-mounted solar installations.",
+      "Yes — single-point advisory from pre-bid to commissioning. We cover feasibility, capacity optimisation, system design, BESS sizing, layouts and SLDs, BOQ validation, land and grid due diligence, CEIG approvals, PPA/PSA review, lender support, FAT, construction monitoring, grid synchronisation, and O&M handover.",
   },
   {
-    question: "How long does a typical solar project take?",
+    question: "Which tenders and clients do you typically support?",
     answer:
-      "Project timelines depend on system size, site complexity, and approval processing. Typically, a commercial rooftop installation can move from site assessment to commissioning within 2–4 months. We handle government approvals, design, supply, and installation — all under one roof — to keep timelines predictable.",
+      "SECI, NTPC/NVVN, RVUNL, DISCOMs, IPPs, large C&I clients, data centres, and EV charging infrastructure. We have supported solar installations for industrial groups including RSPL (1 MW), BSP Group (600 kW), Mahalaxmi Granito (450 kW), and 15+ other granite, marble, textile, and industrial clients.",
   },
   {
-    question: "What is the payback period for commercial solar?",
+    question: "What types of BESS systems do you support?",
     answer:
-      "Many commercial and industrial clients see payback in roughly 3–4 years through electricity savings and available incentives. We provide detailed financial modelling, ROI analysis, and CAPEX/OPEX structuring so you can make informed investment decisions before going solar.",
+      "Standalone BESS, Solar + BESS hybrid configurations, C&I systems from 100 kWh to 2 MWh, and utility-scale containerised systems at 2.5 MWh, 3.44 MWh, and 5 MWh. The chemistry is LFP (Lithium Iron Phosphate) for safety, long cycle life, and grid-scale cost effectiveness.",
   },
   {
-    question: "Do you help with government subsidies and approvals?",
+    question: "Can you help set up a BESS manufacturing facility?",
     answer:
-      "Yes. We offer regulatory and policy advisory, including state and central solar policies, subsidy eligibility, and approval support. Our team manages government approvals as part of our turnkey service so you don't have to navigate the process alone.",
+      "Yes. We offer end-to-end consultancy for BESS factory setup — capacity planning (e.g. 2 GWh/year), factory layout, ELV and clean-room infrastructure, power distribution, installation supervision, trial batches, and production-readiness ramp-up. Our reference design is bankable in Rajasthan with VGF support under RIPS 2024.",
   },
   {
-    question: "What is CAPEX vs OPEX? Do you offer financing options?",
+    question: "What is your approach to bankability and lender support?",
     answer:
-      "CAPEX means you own the system (upfront or financed investment); OPEX typically refers to power-purchase or lease models where a third party owns and operates the plant. We provide support on both models, including payback, IRR, and investment structuring. Contact us for a feasibility study tailored to your site and financial goals.",
+      "We provide design, realistic assumptions, and complete lender-ready documentation. Our team handles tender specifications, grid integration, MNRE / CEA / DISCOM compliance, and PPA/PSA technical review — improving project bankability and reducing risk of rejection or delay.",
   },
   {
-    question: "Do you provide O&M (operations & maintenance)?",
+    question: "Are you vendor-neutral?",
     answer:
-      "Yes. We offer O&M services for long-term plant performance and reliability. Unlike companies that focus only on installation, we ensure your solar plant runs efficiently over its lifespan with regular inspections, cleaning, and performance monitoring.",
+      "Yes. Our advisory is technology-neutral and vendor-independent. Recommendations are based on technical capability, track record, and commercial viability — entirely aligned with the client's long-term interests.",
   },
   {
-    question: "What makes BEPL different from other solar companies?",
+    question: "Where are you based and which regions do you serve?",
     answer:
-      "Our team is built by electrical engineers with deep technical expertise in solar plant design, installation, commissioning, and O&M. We focus on engineering precision, quality execution, and long-term performance — not just sales. We provide end-to-end solutions under one roof with transparency, innovation, and customer service at the core.",
+      "Our office is at 502, 5th Floor, Balaji Tower VI, Durgapura, Jaipur, Rajasthan. We work pan-India for solar EPC, BESS, and consultancy assignments — particularly across Rajasthan, Haryana, Gujarat, and other states with active solar/BESS pipelines.",
+  },
+  {
+    question: "What is the typical commercial structure of your engagements?",
+    answer:
+      "Our consultancy fees are project-specific and milestone-based. Scope can be customised for full lifecycle support or selected stages. Site visits and statutory expenses are billed at actuals. All project data is treated as strictly confidential. Proposals are valid for 30 days from issue.",
   },
 ];

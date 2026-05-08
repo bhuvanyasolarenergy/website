@@ -66,7 +66,7 @@ export const blogPosts = [
       "Rajasthan gets some of the highest solar irradiance in the country. More sun means more kilowatt‑hours per kilowatt‑peak. For the same investment, you simply get more output here than in many other states.",
       "Policy helps. State and central incentives, net metering frameworks, and clearer DISCOM processes (compared with some regions) reduce friction. Approvals aren’t instant, but the path is fairly well marked.",
       "The industrial corridor — Jaipur, Kishangarh, Neemrana, Bhiwadi — is packed with factories and warehouses. High daytime demand, large rooftops, and energy‑cost sensitivity. It’s a natural fit for solar.",
-      "We’re based in Jagatpura and serve clients across the state and beyond. If you’re planning a rooftop or ground‑mount project in the region, reach out. We’re happy to talk feasibility, design, or execution — no obligation.",
+      "We’re based in Durgapura, Jaipur and serve clients across India. If you’re planning a rooftop, ground-mount, or BESS project, reach out. We’re happy to talk feasibility, design, or execution — no obligation.",
     ],
     image: "/images/home-one/blog/blog-1.png",
     imageSmall: "/images/blog/blog-small-1.png",

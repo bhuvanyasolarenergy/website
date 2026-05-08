@@ -155,28 +155,58 @@ Table of Contents
 @import "../../../node_modules/aos/src/sass/aos.scss";
 
 /* ----------------------------------------
+	26 Landing (editorial / B2B design system)
+---------------------------------------- */
+@import "landing/landing";
+@import "landing/header";
+@import "landing/extras";
+@import "landing/pages";
+
+/* ----------------------------------------
 	25 WhatsApp Floating Button
 ---------------------------------------- */
 .whatsapp-floating {
   position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
+  bottom: 1.25rem;
+  left: 1.25rem;
   z-index: 9999;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  font-size: 1.75rem;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #128c7e;
+  color: #fff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  i {
+    font-size: 18px;
+  }
+
+  &::after {
+    content: "Chat";
+  }
+
   &:hover {
-    color: #fff;
-    transform: scale(1.08);
-    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+    transform: translateY(-2px);
+    background: #075e54;
+    color: #fff !important;
+  }
+
+  @media (max-width: 600px) {
+    padding: 12px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+
+    &::after {
+      display: none;
+    }
   }
 }

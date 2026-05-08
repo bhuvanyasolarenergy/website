@@ -1,90 +1,100 @@
-import { blogPosts } from "@/assets/data/blogs";
-import SectionTop from "@/components/shared/SectionTop";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { blogPosts } from "@/assets/data/blogs";
+import LandingCta from "@/components/landing/LandingCta";
+import PageHero from "@/components/landing/PageHero";
 
 const Blog = () => {
   useEffect(() => {
-    document.title = "Blog | Bhuvanya Energy Pvt. Ltd. — Solar Insights & Updates";
+    document.title =
+      "Blog | Bhuvanya Energy — Solar PV, BESS & Industry Insights";
   }, []);
-  const categories = [...new Set(blogPosts.map((p) => p.category))];
-  return (
-    <>
-      <SectionTop title="Blog" />
 
-      <section className="blog-page section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 col-sm-12 col-xs-12">
-              {blogPosts.map((post) => (
-                <article key={post.id} className="post-slide-blog">
-                  <div className="blog-img">
-                    <img src={post.image} className="img-fluid" alt={post.title} />
-                    <span>{post.date.split(" ").slice(1).join(" ")}</span>
-                  </div>
-                  <span className="post-meta">
-                    <i className="fa-regular fa-user"></i> {post.author} · {post.date}
-                  </span>
-                  <h2>
-                    <Link to={`/blogs/${post.id}`}>{post.title}</Link>
-                  </h2>
-                  <p className="post-excerpt">{post.excerpt}</p>
-                  <Link to={`/blogs/${post.id}`} className="srex-btn srex-btn--outline">
-                    Read More<i className="fa-solid fa-plus"></i>
-                  </Link>
-                </article>
-              ))}
-            </div>
-            <div className="col-lg-4 col-sm-12 col-xs-12">
-              <div className="blog_search">
-                <h4 className="blog_sidebar_title">. Search</h4>
-                <input type="text" className="form-control" placeholder="Type &amp; Press Enter" />
-              </div>
-              <div className="categories">
-                <h4 className="blog_sidebar_title">. Categories</h4>
-                <ul>
-                  {categories.map((cat) => (
-                    <li key={cat}>
-                      <Link to="/blogs">
-                        <i className="fa-solid fa-arrow-down"></i> {cat}{" "}
-                        <span>({blogPosts.filter((p) => p.category === cat).length})</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="latest_blog ">
-                <h4 className="blog_sidebar_title">. Latest Blog</h4>
-                {blogPosts.slice(0, 3).map((post) => (
-                  <div key={post.id} className="single_latest_blog">
-                    <img src={post.imageSmall} alt={post.title} />
-                    <span>
-                      <i className="fa-regular fa-calendar-days"></i> {post.date}
-                    </span>
-                    <Link to={`/blogs/${post.id}`}>{post.title}</Link>
-                  </div>
-                ))}
-              </div>
-              <div className="categories">
-                <h4 className="blog_sidebar_title">. Archive</h4>
-                <ul>
-                  <li>
-                    <Link to="/blogs">
-                      <i className="fa-solid fa-arrow-down"></i> March 2025
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blogs">
-                      <i className="fa-solid fa-arrow-down"></i> February 2025
-                    </Link>
-                  </li>
-                </ul>
+  const [feature, ...rest] = blogPosts;
+
+  return (
+    <div className="page-blog">
+      <PageHero
+        eyebrow="Insights"
+        title={
+          <>
+            Field notes on <em>solar &amp; storage</em>.
+          </>
+        }
+        lede="Practical perspective from the BEPL team — site insights, lessons learned, BESS market notes, and policy analysis grounded in execution."
+        pillars={[
+          {
+            num: "→",
+            body: (
+              <>
+                <strong>{blogPosts.length} articles</strong>
+                Engineering &amp; market notes from BEPL.
+              </>
+            ),
+          },
+        ]}
+      />
+
+      {feature ? (
+        <section className="ld-section">
+          <div className="ld-section__inner">
+            <div className="blog-feature">
+              <Link to={`/blogs/${feature.id}`} className="blog-feature__media">
+                <img src={feature.image} alt={feature.title} />
+              </Link>
+              <div className="blog-feature__body">
+                <div className="blog-feature__meta">
+                  <span>{feature.category}</span>
+                  <span className="dot" />
+                  <span>{feature.date}</span>
+                </div>
+                <h2>
+                  <Link to={`/blogs/${feature.id}`}>{feature.title}</Link>
+                </h2>
+                <p>{feature.excerpt}</p>
+                <Link to={`/blogs/${feature.id}`} className="ld-btn ld-btn--ghost">
+                  Read article <i className="fa-solid fa-arrow-right" />
+                </Link>
               </div>
             </div>
           </div>
+        </section>
+      ) : null}
+
+      <section className="ld-section ld-section--tinted">
+        <div className="ld-section__inner">
+          <div className="ld-section__header">
+            <p className="eyebrow">All articles</p>
+            <h2 className="title">More from the BEPL team</h2>
+          </div>
+          <div className="blog-list">
+            {rest.map((post) => (
+              <article key={post.id} className="blog-list__card">
+                <Link to={`/blogs/${post.id}`} className="blog-list__media">
+                  <img src={post.image} alt={post.title} />
+                </Link>
+                <div className="blog-list__body">
+                  <div className="blog-list__meta">
+                    <span>{post.category}</span>
+                    <span className="dot" />
+                    <span>{post.date}</span>
+                  </div>
+                  <h3>
+                    <Link to={`/blogs/${post.id}`}>{post.title}</Link>
+                  </h3>
+                  <p>{post.excerpt}</p>
+                  <Link to={`/blogs/${post.id}`} className="blog-list__more">
+                    Read article <i className="fa-solid fa-arrow-right" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
-    </>
+
+      <LandingCta variant="compact" />
+    </div>
   );
 };
 

@@ -38,31 +38,30 @@ const ServiceDetails = () => {
                 <div className="srex-single-pro-img">
                   <img src="/images/single_pro_img.png" alt="" />
                 </div>
-                <h1>Benefits of going solar with Bhuvanya Energy</h1>
+                <h1>Solar PV &amp; BESS — turnkey services from BEPL</h1>
                 <p>
-                  Rooftop and ground-mounted solar help you reduce electricity costs, improve predictability against tariff hikes, and lower carbon emissions. We support
-                  residential, commercial, and industrial clients with consultancy, engineering, approvals, installation, commissioning, and O&amp;M — aligned with how we
-                  describe our work in the company profile.
+                  Bhuvanya Energy delivers end-to-end Solar PV and Battery Energy Storage System (BESS) services for residential, C&amp;I, utility-scale, and IPP clients.
+                  Our seven service lines cover EPC, consultancy, investment opportunities, O&amp;M, factory setup, and management advisory.
                 </p>
                 <ul>
                   <li>
-                    <i className="fa-solid fa-check"></i> Lower operating costs through on-site generation
+                    <i className="fa-solid fa-check"></i> Turnkey Solar &amp; BESS EPC under one roof
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> Turnkey execution from design through commissioning
+                    <i className="fa-solid fa-check"></i> MNRE / CEA / DISCOM compliance and tender support
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> Transparent guidance on subsidies, policy, and ROI
+                    <i className="fa-solid fa-check"></i> Bankability and lender support for financial closure
                   </li>
                   <li>
-                    <i className="fa-solid fa-check"></i> Long-term performance focus with O&amp;M support
+                    <i className="fa-solid fa-check"></i> Long-term O&amp;M and lifecycle performance optimisation
                   </li>
                 </ul>
                 <p>{company.vision}</p>
                 <h4>Typical engagement steps</h4>
                 <p>
-                  Feasibility and site assessment, financial modelling, technology and vendor selection, detailed engineering, regulatory filings, construction and
-                  commissioning, then handover with monitoring and maintenance options — all centred on solar; we do not offer wind or unrelated energy products.
+                  Pre-bid feasibility, capacity optimisation, system and BESS design, BOQ validation, land &amp; grid due diligence, CEIG approvals, PPA/PSA review, lender
+                  support, FAT, construction monitoring, grid synchronisation, and O&amp;M handover — all under a single-point advisory across the project lifecycle.
                 </p>
                 <p className="mt-3">
                   <Link to="/contact" className="srex-btn srex-btn--primary">

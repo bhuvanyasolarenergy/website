@@ -31,7 +31,7 @@ const AboutIntro = () => {
               />
               <div className="about-intro__card-badge">
                 <img src="/images/about-us/medal.png" alt="" />
-                <span>15+ years of combined experience</span>
+                <span>35+ years combined leadership in Solar &amp; BESS</span>
               </div>
             </div>
           </div>

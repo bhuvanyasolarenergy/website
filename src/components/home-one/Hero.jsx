@@ -12,11 +12,11 @@ const Hero = () => {
                   Bhuvanya Energy
                   <span className="srex-hero-one__box__text__top__line"></span>
                 </span>
-                Solar &amp; power solutions <br />
+                Solar PV &amp; BESS <br />
                 for a <span>cleaner tomorrow</span>
               </h1>
               <p data-aos="fade-up" data-aos-delay="300" className="srex-hero-one__box__desc">
-                Bhuvanya Energy Pvt. Ltd. designs and delivers solar projects for homes, businesses, and industry—helping you save costs and switch to reliable renewable energy.
+                Bhuvanya Energy Private Limited delivers turnkey Solar PV and Battery Energy Storage Systems — EPC, consultancy, and factory setup for residential, C&amp;I, and utility-scale clients across India.
               </p>
 
               <Link data-aos="fade-up" data-aos-delay="500" to="/services" className="srex-btn srex-btn--outline">

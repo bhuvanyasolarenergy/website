@@ -1,89 +1,86 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { faqItems } from "@/assets/data/faq";
 import { company } from "@/assets/data/company";
+import LandingCta from "@/components/landing/LandingCta";
+import PageHero from "@/components/landing/PageHero";
 
 const Faq = () => {
+  const [open, setOpen] = useState(0);
+
   return (
-    <>
-      <section className="faq-hero">
-        <div className="faq-hero__bg" aria-hidden="true" />
-        <div className="container">
-          <div className="faq-hero__inner">
-            <nav className="faq-hero__breadcrumb" aria-label="Breadcrumb">
-              <Link to="/">Home</Link>
-              <span className="faq-hero__separator" aria-hidden="true">/</span>
-              <span>FAQ</span>
-            </nav>
-            <h1 className="faq-hero__title">Frequently asked questions</h1>
-            <p className="faq-hero__desc">
-              Answers to common questions about our solar solutions, services, and process — based on the BEPL company profile.
-            </p>
+    <div className="page-faq">
+      <PageHero
+        eyebrow="FAQ"
+        title={
+          <>
+            Frequently asked <em>questions</em>.
+          </>
+        }
+        lede="Answers grounded in our company profile — bankability, tenders, BESS sizing, factory setup, and commercial structure."
+        actions={
+          <div className="ld-hero__cta">
+            <Link to="/contact" className="ld-btn ld-btn--accent">
+              Have a different question?{" "}
+              <i className="fa-solid fa-arrow-right" />
+            </Link>
+          </div>
+        }
+        pillars={[
+          {
+            num: "→",
+            body: (
+              <>
+                <strong>{faqItems.length} answers</strong>
+                Covering services, lifecycle, tenders, BESS &amp; factory.
+              </>
+            ),
+          },
+          {
+            num: "→",
+            body: (
+              <>
+                <strong>Direct contact</strong>
+                <a
+                  href={`tel:${company.phoneTel}`}
+                  className="ld-hero__pillar-link"
+                >
+                  {company.phoneDisplay}
+                </a>
+              </>
+            ),
+          },
+        ]}
+      />
+
+      <section className="ld-section">
+        <div className="ld-section__inner">
+          <div className="faq-page">
+            <div className="ld-faq__list">
+              {faqItems.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`ld-faq__item ${open === idx ? "is-open" : ""}`}
+                >
+                  <button
+                    type="button"
+                    className="ld-faq__btn"
+                    onClick={() => setOpen(open === idx ? -1 : idx)}
+                    aria-expanded={open === idx}
+                  >
+                    <span>{item.question}</span>
+                    <i className="fa-solid fa-plus ld-faq__icon" />
+                  </button>
+                  <div className="ld-faq__answer">{item.answer}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="faq-section">
-        <div className="container">
-          <div className="faq-grid">
-            <div className="faq-accordion" data-aos="fade-up">
-              <div className="accordion" id="faqAccordion">
-                {faqItems.map(({ question, answer }, idx) => (
-                  <div key={idx} className="faq-accordion__item">
-                    <div className="faq-accordion__header">
-                      <button
-                        type="button"
-                        className={`faq-accordion__btn ${idx === 0 ? "" : "collapsed"}`}
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#faqCollapse${idx}`}
-                        aria-expanded={idx === 0}
-                        aria-controls={`faqCollapse${idx}`}
-                        id={`faqHeading${idx}`}
-                      >
-                        <span className="faq-accordion__question">{question}</span>
-                        <i className="fa-solid fa-plus faq-accordion__icon" aria-hidden="true" />
-                      </button>
-                    </div>
-                    <div
-                      id={`faqCollapse${idx}`}
-                      className={`accordion-collapse collapse ${idx === 0 ? "show" : ""}`}
-                      aria-labelledby={`faqHeading${idx}`}
-                      data-bs-parent="#faqAccordion"
-                    >
-                      <div className="faq-accordion__body">
-                        {answer}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="faq-sidebar" data-aos="fade-up" data-aos-delay="150">
-              <div className="faq-sidebar__card">
-                <img
-                  src="/images/home-two/question/question-img.png"
-                  alt="Solar solutions"
-                  className="faq-sidebar__img"
-                />
-                <div className="faq-sidebar__badge">
-                  <span className="faq-sidebar__number">15+</span>
-                  <span className="faq-sidebar__label">Years combined experience</span>
-                </div>
-              </div>
-              <div className="faq-sidebar__contact">
-                <h3>Still have questions?</h3>
-                <p>Reach out for a consultation or feasibility study.</p>
-                <a href={company.whatsappUrl} target="_blank" rel="noreferrer" className="faq-sidebar__cta">
-                  <i className="fa-brands fa-whatsapp" aria-hidden="true" /> Chat on WhatsApp
-                </a>
-                <a href={`mailto:${company.email}`} className="faq-sidebar__cta faq-sidebar__cta--outline">
-                  <i className="fa-solid fa-envelope" aria-hidden="true" /> {company.email}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+      <LandingCta variant="compact" />
+    </div>
   );
 };
 

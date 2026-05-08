@@ -20,7 +20,7 @@ const Service = () => {
             Our Services
           </h5>
           <h2 data-aos="fade-up" data-aos-delay="300" className="srex-section__head__title ">
-            Solar solutions aligned with your site, load, and goals
+            Solar PV, BESS &amp; consultancy aligned with your project goals
           </h2>
         </div>
         <div className="srex-info-box">
